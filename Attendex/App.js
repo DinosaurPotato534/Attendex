@@ -1,12 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, SafeAreaView, Dimensions,  } from 'react-native';
-
-module.exports = {
-  project: {
-    ios:{}
-  },
-  assets:['.assets/fonts/'],
-}
+import { StyleSheet, Text, View, SafeAreaView, Dimensions, Image,  } from 'react-native';
 
 
 export default function App() {
@@ -15,7 +8,9 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text style={styles.welcome}>Welcome!</Text>
+      <Image source={require("./assets/logo_.png")} />
     </View>
+    
   );
 }
 
