@@ -23,8 +23,6 @@ const styles = StyleSheet.create({
     fontWeight: 300,
     fontSize: 16,
     height: 26,
-    alignContent: 'center',
-    justifyContent: 'center',
     width: 290,
     top: 605,
     left: 50,
