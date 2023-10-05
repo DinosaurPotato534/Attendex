@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { View, StyleSheet, Image, Text } from 'react-native';
+import { View, StyleSheet, Image, Text, Button } from 'react-native';
 import * as Font from 'expo-font';
 
 export default function App() {
@@ -23,6 +23,7 @@ export default function App() {
           <Image style={styles.polygon} source={require('./assets/logo_.png')} />
           <Text style={styles.welcome}>Welcome!</Text>
           <Text style={styles.name}>Attendex</Text>
+          <Button style={styles.next}></Button>
         </>
       ) : null}
     </View>
@@ -57,4 +58,10 @@ const styles = StyleSheet.create({
     fontWeight: '300',
     marginTop: 20,
   },
+
+  next: {
+    
+    
+    
+  }
 });
