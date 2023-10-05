@@ -28,10 +28,6 @@ const styles = StyleSheet.create({
     width: 290,
     top: 605,
     left: 50,
-    
-
-
-
 
   },
 
