@@ -19,7 +19,6 @@ export default function App() {
 const styles = StyleSheet.create({
   name: {
     color: 'white',
-    fontFamily: 'lexend',
     fontWeight: 300,
     fontSize: 16,
     height: 26,
@@ -52,7 +51,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     fontSize: 40,
-    fontFamily: 'lexend',
     top: 551,
     left: 98,
     fontWeight: 600,
