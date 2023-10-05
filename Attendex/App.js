@@ -9,7 +9,7 @@ export default function App() {
     <View style={styles.container}>
       <Text style={styles.welcome}>Welcome!</Text>
       <Image style={styles.polygon} source={require("./assets/logo_.png")} />
-      <Text style={styles.name}>attendex</Text>
+      <Text style={styles.name}>Attendex</Text>
     </View>
     
   );
