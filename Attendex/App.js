@@ -1,69 +1,60 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, SafeAreaView, Dimensions, Image, Button,  } from 'react-native';
-
+import React, { useEffect, useState } from 'react';
+import { View, StyleSheet, Image, Text } from 'react-native';
+import * as Font from 'expo-font';
 
 export default function App() {
-  console.log("App executed");
-  
+  const [fontLoaded, setFontLoaded] = useState(false);
+
+  useEffect(() => {
+    loadCustomFont();
+  }, []);
+
+  async function loadCustomFont() {
+    await Font.loadAsync({
+      'lexend-semi-bold': require('./assets/fonts/Lexend-SemiBold.ttf'),
+    });
+    setFontLoaded(true);
+  }
+
   return (
     <View style={styles.container}>
-      <Text style={styles.welcome}>Welcome!</Text>
-      <Image style={styles.polygon} source={require("./assets/logo_.png")} />
-      <Text style={styles.name}>Attendex</Text>
+      {fontLoaded ? (
+        <>
+          <Image style={styles.polygon} source={require('./assets/logo_.png')} />
+          <Text style={styles.welcome}>Welcome!</Text>
+          <Text style={styles.name}>Attendex</Text>
+        </>
+      ) : null}
     </View>
-    
   );
 }
 
-
 const styles = StyleSheet.create({
-  name: {
-    color: 'white',
-    fontFamily: 'lexend',
-    fontWeight: 300,
-    fontSize: 16,
-    height: 26,
-    width: 290,
-    top: 605,
-    left: 50,
-
-  },
-
-
-
-
-  polygon: {
-    width: 365.54,
-    height: 309,
-    alignItems: 'center',
-    justifyContent: 'center',
-    top: 177,
-    left: 17,
-    
-  },
-
-
-
-
-  welcome: {
-    color: 'white',
-    width: 194,
-    height: 50,
-    alignItems: 'center',
-    justifyContent: 'center',
-    fontSize: 40,
-    fontFamily: 'lexend',
-    top: 551,
-    left: 98,
-    fontWeight: 600,
-},
-
-
   container: {
     flex: 1,
     backgroundColor: '#090909',
     alignItems: 'center',
     justifyContent: 'center',
   },
+
+  polygon: {
+    width: 365.54,
+    height: 309,
+  },
+
+  welcome: {
+    color: 'white',
+    fontFamily: 'lexend-semi-bold',
+    fontSize: 40,
+    fontWeight: '600',
+    marginTop: 20,
+  },
+
+  name: {
+    color: 'white',
+    fontFamily: 'lexend-semi-bold',
+    fontSize: 16,
+    fontWeight: '300',
+    marginTop: 20,
+  },
 });
- 
