@@ -18,7 +18,7 @@ export default function App() {
 
 const styles = StyleSheet.create({
   name: {
-    color: #FFFFFF,
+    color: 'white',
     fontFamily: 'lexend',
     fontWeight: 300,
     fontSize: 16,
