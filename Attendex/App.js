@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, SafeAreaView, Dimensions, Image,  } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView, Dimensions, Image, Button,  } from 'react-native';
 
 
 export default function App() {
@@ -37,10 +37,9 @@ const styles = StyleSheet.create({
     height: 309,
     alignItems: 'center',
     justifyContent: 'center',
-    top: 0,
-    right: 0,
-    left: 0,
-    bottom: 0,
+    top: 177,
+    left: 17,
+    
   },
 
 
@@ -54,10 +53,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     fontSize: 40,
     fontFamily: 'lexend',
-    top: 0,
-    right: 0,
-    left: 0,
-    bottom: 0,
+    top: 551,
+    left: 98,
+    fontWeight: 600,
 },
 
 
