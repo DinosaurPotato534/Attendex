@@ -8,7 +8,8 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text style={styles.welcome}>Welcome!</Text>
-      <Image source={require("./assets/logo_.png")} />
+      <Image style={styles.polygon} source={require("./assets/logo_.png")} />
+      <Text style={styles.name}>Attendex</Text>
     </View>
     
   );
@@ -16,15 +17,54 @@ export default function App() {
 
 
 const styles = StyleSheet.create({
-welcome: {
-  color: 'white',
-  width: 194,
-  height: 50,
-  alignItems: 'center',
-  justifyContent: 'center',
-  fontSize: 40,
-  fontFamily: 'Lexend',
-  paddingTop: 0},
+  name: {
+    color: #FFFFFF,
+    fontFamily: 'lexend',
+    fontWeight: 300,
+    fontSize: 16,
+    height: 26,
+    alignContent: 'center',
+    justifyContent: 'center',
+    width: 290,
+    top: 605,
+    left: 50,
+    
+
+
+
+
+  },
+
+
+
+
+  polygon: {
+    width: 365.54,
+    height: 309,
+    alignItems: 'center',
+    justifyContent: 'center',
+    top: 0,
+    right: 0,
+    left: 0,
+    bottom: 0,
+  },
+
+
+
+
+  welcome: {
+    color: 'white',
+    width: 194,
+    height: 50,
+    alignItems: 'center',
+    justifyContent: 'center',
+    fontSize: 40,
+    fontFamily: 'lexend',
+    top: 0,
+    right: 0,
+    left: 0,
+    bottom: 0,
+},
 
 
   container: {
