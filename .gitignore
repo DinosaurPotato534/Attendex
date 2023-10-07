@@ -1,0 +1,5 @@
+# Ignore root node_modules
+/node_modules/
+
+# Ignore node_modules within the Attendex directory
+/Attendex/node_modules/

@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { View, StyleSheet, Image, Text, Button } from 'react-native';
+import { View, StyleSheet, Image, Text, SafeAreaView } from 'react-native';
 import * as Font from 'expo-font';
+import { useNavigation } from '@react-navigation/native';
 
 export default function StartScreen() {
   const [fontLoaded, setFontLoaded] = useState(false);
+  const navigation = useNavigation();
 
   useEffect(() => {
     loadCustomFont();
@@ -17,16 +19,18 @@ export default function StartScreen() {
   }
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container} onTouchEnd={() => navigation.navigate('Account')}>
       {fontLoaded ? (
         <>
           <Image style={styles.polygon} source={require('../assets/logo_.png')} />
           <Text style={styles.welcome}>Welcome!</Text>
           <Text style={styles.name}>Attendex</Text>
-          <Button style={styles.next}></Button>
         </>
       ) : null}
-    </View>
+      <View style={styles.bottomSubtext}>
+        <Text style={styles.subtext}>Tap Anywhere To Continue</Text>
+      </View>
+    </SafeAreaView>
   );
 }
 
@@ -36,6 +40,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#090909',
     alignItems: 'center',
     justifyContent: 'center',
+    position: 'relative',
   },
 
   polygon: {
@@ -56,10 +61,16 @@ const styles = StyleSheet.create({
     fontFamily: 'lexend-semi-bold',
     fontSize: 16,
     fontWeight: '300',
-    marginTop: 20,
+    marginTop: 10,
   },
 
-  next: {
-    // Add your styles for the button here.
-  }
+  subtext: {
+    color: 'white',
+  },
+
+  bottomSubtext: {
+    position: 'absolute',
+    bottom: 0,
+    marginBottom: 50,
+  },
 });
