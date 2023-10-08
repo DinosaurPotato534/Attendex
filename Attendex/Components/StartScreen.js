@@ -44,8 +44,8 @@ const styles = StyleSheet.create({
   },
 
   polygon: {
-    width: 365.54,
-    height: 309,
+    width: 250,
+    height: 350,
   },
 
   welcome: {
