@@ -11,7 +11,7 @@ import {
 import * as Font from 'expo-font';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
-import { useNavigation } from '@react-navigation/native'; // Import useNavigation
+import { useNavigation } from '@react-navigation/native';
 import { useStudentContext } from './StudentContext';
 
 const firebaseConfig = {
@@ -23,7 +23,7 @@ firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 
 export default function Account() {
-  const navigation = useNavigation(); // Use useNavigation to get the navigation object
+  const navigation = useNavigation();
   const [fontLoaded, setFontLoaded] = useState(false);
   const [studentID, setStudentID] = useState('');
   const [password, setPassword] = useState('');
@@ -64,13 +64,14 @@ export default function Account() {
                 studentID: studentID,
                 name: studentArray[1],
                 status: studentArray[2],
+                grade: studentArray[4],
               };
 
               setStudentInfo(studentInfo);
 
               console.log('Login successful for student:', studentID);
 
-              navigation.navigate('Home'); // Navigate to the "Home" screen
+              navigation.navigate('Home');
             } else {
               console.log('Incorrect password');
             }
